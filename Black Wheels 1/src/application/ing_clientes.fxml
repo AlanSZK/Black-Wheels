@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768.0" prefWidth="1366.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Label layoutX="83.0" layoutY="116.0" text="Datos peronales" textAlignment="CENTER" textFill="#008643">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="nombre_cliente" layoutX="241.0" layoutY="181.0" prefHeight="31.0" prefWidth="317.0" />
+      <Label layoutX="79.0" layoutY="292.0" text="Datos automóvil" textAlignment="CENTER" textFill="#008643">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="ing_datos" layoutX="561.0" layoutY="708.0" mnemonicParsing="false" onAction="#clienttodb" text="Ingresar datos" />
+      <Label layoutX="155.0" layoutY="183.0" prefHeight="27.0" prefWidth="76.0" text="Nombre:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="rut_cliente" layoutX="654.0" layoutY="181.0" prefHeight="31.0" prefWidth="317.0" promptText="xx.xxx.xxx-x" />
+      <Label layoutX="595.0" layoutY="183.0" prefHeight="27.0" prefWidth="76.0" text="Rut:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="direccion_cliente" layoutX="241.0" layoutY="245.0" prefHeight="31.0" prefWidth="317.0" />
+      <Label layoutX="155.0" layoutY="247.0" prefHeight="27.0" prefWidth="76.0" text="Dirección:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="contacto_cliente" layoutX="772.0" layoutY="243.0" prefHeight="31.0" prefWidth="317.0" />
+      <Label layoutX="595.0" layoutY="247.0" prefHeight="27.0" prefWidth="197.0" text="Numero de contacto:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="patente" layoutX="238.0" layoutY="352.0" prefHeight="31.0" prefWidth="223.0" />
+      <Label layoutX="152.0" layoutY="354.0" prefHeight="27.0" prefWidth="76.0" text="Patente:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <Label layoutX="510.0" layoutY="468.0" prefHeight="27.0" prefWidth="172.0" text="Tipo de combustible">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="modelo" layoutX="600.0" layoutY="412.0" prefHeight="31.0" prefWidth="317.0" />
+      <Label layoutX="514.0" layoutY="414.0" prefHeight="27.0" prefWidth="76.0" text="Modelo:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="chasis" layoutX="662.0" layoutY="352.0" prefHeight="31.0" prefWidth="418.0" />
+      <Label layoutX="510.0" layoutY="354.0" prefHeight="27.0" prefWidth="174.0" text="Número de chasis:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="cilindrada" layoutX="262.0" layoutY="466.0" prefHeight="31.0" prefWidth="223.0" />
+      <Label layoutX="152.0" layoutY="468.0" prefHeight="27.0" prefWidth="98.0" text="Cilindrada:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="marca" layoutX="238.0" layoutY="412.0" prefHeight="31.0" prefWidth="223.0" />
+      <Label layoutX="152.0" layoutY="414.0" prefHeight="27.0" prefWidth="76.0" text="Marca:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="ano" layoutX="1039.0" layoutY="466.0" prefHeight="31.0" prefWidth="191.0" />
+      <Label layoutX="953.0" layoutY="468.0" prefHeight="27.0" prefWidth="76.0" text="Año:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="color" layoutX="1036.0" layoutY="410.0" prefHeight="31.0" prefWidth="146.0" />
+      <Label layoutX="953.0" layoutY="414.0" prefHeight="27.0" prefWidth="76.0" text="Color:">
+         <font>
+            <Font size="17.0" />
+         </font>
+      </Label>
+      <TextField fx:id="combustible" layoutX="698.0" layoutY="466.0" prefHeight="31.0" prefWidth="223.0" />
+      <Button layoutX="170.0" layoutY="708.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+      <Label layoutX="47.0" layoutY="50.0" text="Ingreso Clientes" textFill="#163ff2">
+         <font>
+            <Font name="System Italic" size="36.0" />
+         </font>
+      </Label>
+      <Label fx:id="detalle" layoutX="91.0" layoutY="508.0" text="Detalle" textAlignment="CENTER" textFill="#008643">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <TextArea layoutX="180.0" layoutY="543.0" prefHeight="149.0" prefWidth="993.0" />
+   </children>
+</AnchorPane>

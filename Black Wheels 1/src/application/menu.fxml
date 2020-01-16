@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1366.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <left>
+      <AnchorPane id="ingresar" fx:id="ingresar" onMouseClicked="#ing_screen" prefHeight="768.0" prefWidth="455.3" style="-fx-background-color: #e85946;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="ing_lbl" alignment="CENTER" contentDisplay="CENTER" layoutX="146.0" layoutY="363.0" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#lbl_glow" styleClass="ingresar" text="INGRESAR" textFill="WHITE">
+               <font>
+                  <Font name="Corbel" size="36.0" />
+               </font>
+               <effect>
+                  <Glow level="0.0" />
+               </effect>
+            </Label>
+         </children>
+         <effect>
+            <Glow level="0.0" />
+         </effect>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane fx:id="consultar" onMouseClicked="#con_screen" prefHeight="768.0" prefWidth="455.33" style="-fx-background-color: #1661f7;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="cons_lbl" alignment="CENTER" contentDisplay="CENTER" layoutX="127.0" layoutY="363.0" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#lbl_glow" text="CONSULTAR" textFill="WHITE">
+               <font>
+                  <Font name="Corbel" size="36.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane fx:id="modificar" onMouseClicked="#mod_screen" prefHeight="200.0" prefWidth="455.33" style="-fx-background-color: #66cc64;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="mod_lbl" alignment="CENTER" contentDisplay="BOTTOM" layoutX="137.0" layoutY="363.0" nodeOrientation="LEFT_TO_RIGHT" onMouseEntered="#lbl_glow" text="MODIFICAR" textFill="WHITE">
+               <font>
+                  <Font name="Corbel" size="36.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <Blend />
+         </effect>
+      </AnchorPane>
+   </right>
+</BorderPane>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Accordion?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="768" prefWidth="1366" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainController">
+   <children>
+      <Button layoutX="279.0" layoutY="655.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+      <Label layoutX="65.0" layoutY="50.0" text="Consultas" textFill="#163ff2">
+         <font>
+            <Font name="System Italic" size="36.0" />
+         </font>
+      </Label>
+      <VBox alignment="TOP_CENTER" layoutX="262.0" layoutY="132.0" prefHeight="500.0" prefWidth="853.0">
+         <children>
+            <Accordion prefHeight="515.0" prefWidth="741.0">
+              <panes>
+                <TitledPane animated="false" text="Datos de clientes">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TextField layoutX="204.0" layoutY="44.0" />
+                              <Label layoutX="147.0" layoutY="126.0" />
+                              <Label layoutX="27.0" layoutY="49.0" prefHeight="21.0" prefWidth="172.0" text="Ingrese busqueda aquí :" />
+                              <Button layoutX="46.0" layoutY="111.0" mnemonicParsing="false" text="Búsqueda por rut" />
+                              <Button layoutX="222.0" layoutY="111.0" mnemonicParsing="false" text="Búsqueda por nombre" />
+                              <VBox layoutX="416.0" layoutY="14.0" prefHeight="159.0" prefWidth="435.0">
+                                 <children>
+                                    <Label text="Nombre:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Rut:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Dirección:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Contacto:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Cantidad de vehiculos en el taller:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Patentes:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                              <Label fx:id="ver_msg" layoutX="426.0" layoutY="161.0" />
+                              <Button layoutX="46.0" layoutY="167.0" mnemonicParsing="false" text="Búsqueda por patente" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Datos de trabajadores">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                                 <children>
+                                    <TextField layoutX="204.0" layoutY="44.0" />
+                                    <Label layoutX="147.0" layoutY="126.0" />
+                                    <Label layoutX="27.0" layoutY="49.0" prefHeight="21.0" prefWidth="172.0" text="Ingrese busqueda aquí :" />
+                                    <Button layoutX="46.0" layoutY="111.0" mnemonicParsing="false" text="Búsqueda por rut" />
+                                    <Button layoutX="222.0" layoutY="111.0" mnemonicParsing="false" text="Búsqueda por nombre" />
+                                    <Label fx:id="ver_msg1" layoutX="426.0" layoutY="161.0" />
+                                 </children>
+                              </AnchorPane>
+                              <VBox layoutX="402.0" layoutY="14.0" prefHeight="134.0" prefWidth="435.0">
+                                 <children>
+                                    <Label text="Nombre:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Rut:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Dirección:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <Label text="Contacto:">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Ingresos del mes">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="40.0" layoutY="53.0" text="Seleccione mes :" />
+                              <Button layoutX="73.0" layoutY="144.0" mnemonicParsing="false" text="Ver" />
+                              <AnchorPane prefHeight="200.0" prefWidth="200.0" />
+                              <TextField layoutX="175.0" layoutY="48.0" />
+                              <Label layoutX="452.0" layoutY="53.0" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Trabajos realizados en el mes">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="32.0" layoutY="53.0" prefHeight="21.0" prefWidth="152.0" text="Seleccione mes:" />
+                              <Button layoutX="108.0" layoutY="126.0" mnemonicParsing="false" text="Ver" />
+                              <TextField layoutX="165.0" layoutY="48.0" />
+                              <Label layoutX="450.0" layoutY="53.0" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Tipo de fallo más común">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="72.0" layoutY="67.0" text="El fallo más comun es:" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Tiendas de repuestos">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="69.0" layoutY="26.0" text="Tiendas:" />
+                              <VBox layoutX="138.0" layoutY="26.0" prefHeight="200.0" prefWidth="267.0" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Duración vehículo en taller">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="41.0" layoutY="46.0" text="Patente:" />
+                              <TextField layoutX="105.0" layoutY="41.0" />
+                              <Button layoutX="135.0" layoutY="110.0" mnemonicParsing="false" text="Buscar" />
+                              <Label layoutX="351.0" layoutY="46.0" text="Duración:" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+                <TitledPane animated="false" text="Repuestos comprados">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="59.0" layoutY="36.0" />
+                              <TextField layoutX="186.0" layoutY="21.0" />
+                              <Label layoutX="14.0" layoutY="26.0" prefHeight="21.0" prefWidth="172.0" text="Ingrese busqueda aquí :" />
+                              <Button layoutX="22.0" layoutY="71.0" mnemonicParsing="false" text="Búsqueda por repuesto" />
+                              <Button layoutX="215.0" layoutY="71.0" mnemonicParsing="false" text="Búsqueda por fecha" />
+                           </children></AnchorPane>
+                  </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

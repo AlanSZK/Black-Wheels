@@ -1,0 +1,9 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.box
+{
+	-fx-display-caret :false;
+	-fx-text-fill:  #e85946;
+	-fx-control-inner-background: #e85946;
+}
+
