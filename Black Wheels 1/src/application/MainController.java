@@ -74,8 +74,6 @@ public class MainController implements Initializable {
 	@FXML
 	private TextArea detalle;
 	@FXML
-	private TextArea fallo;
-	@FXML
 	private TextField rut_trabajador;
 	@FXML
 	private TextField nombre_trabajador;
@@ -84,20 +82,11 @@ public class MainController implements Initializable {
 	@FXML
 	private TextField contacto_trabajador;
 	
-	//tienda 
-	@FXML
-	private TextField nombre_tienda;
-	@FXML
-	private TextField id_tienda;
-	@FXML
-	private TextField contacto_tienda;
-	@FXML
-	private TextField direccion_tienda;
 
 
 	private Connection con = null;
 	private PreparedStatement pst= null;
-	private PreparedStatement pst2=null;
+	private PreparedStatement pst2= null;
 
 	public void ing_screen(MouseEvent event) throws Exception {
 		Parent load = FXMLLoader.load(getClass().getResource("/application/ingresar.fxml"));
@@ -141,14 +130,7 @@ public class MainController implements Initializable {
 		window.setScene(ingresar);
 		window.show();
 	}
-	public void ing_tienda_screen(ActionEvent event) throws Exception{
-		Parent load = FXMLLoader.load(getClass().getResource("/application/ing_tienda.fxml"));
-		Scene ingresar = new Scene(load);
-		Stage window = (Stage)((Node)event.getSource()).getScene().getWindow();
-		window.setScene(ingresar);
-		window.show();
-	}
-	
+
 	public void lbl_glow(MouseEvent event) throws Exception{
 		//En construccion
 	}
@@ -208,53 +190,12 @@ public class MainController implements Initializable {
 	}
 				
 }
-	public void storetodb(ActionEvent event) throws SQLException {
-		String sql = "INSERT INTO Tienda(CodTienda,Nombre,Numero_de_telefono,Direccion) VALUES (?,?,?,?)";
-		try {
-			pst = con.prepareStatement(sql);
-			pst.setString(1, id_tienda.getText());
-			pst.setString(2, nombre_tienda.getText());
-			pst.setString(3, contacto_tienda.getText());
-			pst.setString(4, direccion_tienda.getText());
-			
-			int i= pst.executeUpdate();
-			if(i==1)
-				System.out.println("Datos ingresados con exito");
-			
-		} catch (SQLException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		finally {
-			pst.close();
-		}
-	}
 	
 	
-	public void cartodb() throws SQLException {
-		String sql = "INSERT INTO Vehiculo(Patente,Ano,Numero_de_chasis,Cilindrada,Tipo_de_combustible) VALUES(?,?,?,?,?)";
-		pst = con.prepareStatement(sql);
-		pst.setString(1,patente.getText());
-		pst.setString(2, ano.getText());
-		pst.setString(3, chasis.getText());
-		pst.setString(4, cilindrada.getText());
-		pst.setString(5, combustible.getText());
-		
-	}
-	
-	public void problemtodb() throws SQLException {
-		String sql = "INSERT INTO Utiliza(Tipo_fallo) VALUES (?)";
-		pst = con.prepareStatement(sql);
-		sql = "INSERT INTO DetalleUtiliza(Descripcion) VALUES (?)";
-		pst2 = con.prepareStatement(sql);
-		pst.setString(1, fallo.getText());
-		pst2.setString(1, detalle.getText());
-		
-		
-	}
-	
-	public void clienttodb() throws SQLException {
+	public void clienttodb(ActionEvent event) throws SQLException {
 		String sql = "INSERT INTO Cliente(Rut,Nombre,Direccion,Numero_de_contacto) VALUES(?,?,?,?)";
+		String sql2 = "INSERT INTO Vehiculo(Patente,Ano,Numero_de_chasis,Cilindrada,Tipo_de_combustible) VALUES(?,?,?,?,?)";
+		String sql3 = "INSERT INTO Utiliza(Tipo_fallo) VALUES (?)";
 		
 		try {
 			pst = con.prepareStatement(sql);
@@ -263,6 +204,19 @@ public class MainController implements Initializable {
 			pst.setString(3, direccion_cliente.getText());
 			pst.setString(4, contacto_cliente.getText());
 			
+			
+			/*no sirve:(
+			pst = con.prepareStatement(sql2);
+			pst.setString(1,patente.getText());
+			pst.setString(2, ano.getText());
+			pst.setString(3, chasis.getText());
+			pst.setString(4, cilindrada.getText());
+			pst.setString(5, combustible.getText());
+			
+		
+			pst = con.prepareStatement(sql3);
+			pst.setString(1, detalle.getText());
+			*/
 			
 			int i = pst.executeUpdate();
 			if(i==1)
@@ -277,12 +231,6 @@ public class MainController implements Initializable {
 		}
 		
 	}
-	public void ingreso_cliente(ActionEvent event) throws SQLException{
-		clienttodb();
-		cartodb();
-		problemtodb();
-		System.out.println("Datos ingresados con exito");
-		
-	}
+
 	
 }	

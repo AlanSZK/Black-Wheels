@@ -20,7 +20,7 @@
             <Font size="24.0" />
          </font>
       </Label>
-      <Button fx:id="ing_datos" layoutX="560.0" layoutY="711.0" mnemonicParsing="false" onAction="#ingreso_cliente" text="Ingresar datos" />
+      <Button fx:id="ing_datos" layoutX="561.0" layoutY="708.0" mnemonicParsing="false" onAction="#clienttodb" text="Ingresar datos" />
       <Label layoutX="155.0" layoutY="183.0" prefHeight="27.0" prefWidth="76.0" text="Nombre:">
          <font>
             <Font size="17.0" />
@@ -67,7 +67,7 @@
             <Font size="17.0" />
          </font>
       </Label>
-      <TextField fx:id="cilindrada" layoutX="241.0" layoutY="466.0" prefHeight="31.0" prefWidth="223.0" />
+      <TextField fx:id="cilindrada" layoutX="262.0" layoutY="466.0" prefHeight="31.0" prefWidth="223.0" />
       <Label layoutX="152.0" layoutY="468.0" prefHeight="27.0" prefWidth="98.0" text="Cilindrada:">
          <font>
             <Font size="17.0" />
@@ -92,23 +92,17 @@
          </font>
       </Label>
       <TextField fx:id="combustible" layoutX="698.0" layoutY="466.0" prefHeight="31.0" prefWidth="223.0" />
-      <Button layoutX="169.0" layoutY="711.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
+      <Button layoutX="170.0" layoutY="708.0" mnemonicParsing="false" onAction="#volver" text="Volver" />
       <Label layoutX="47.0" layoutY="50.0" text="Ingreso Clientes" textFill="#163ff2">
          <font>
             <Font name="System Italic" size="36.0" />
          </font>
       </Label>
-      <TextArea fx:id="detalle" layoutX="143.0" layoutY="548.0" prefHeight="149.0" prefWidth="700.0" />
-      <Label layoutX="917.0" layoutY="512.0" prefHeight="27.0" prefWidth="172.0" text="Tipo de fallo:">
+      <Label fx:id="detalle" layoutX="91.0" layoutY="508.0" text="Detalle" textAlignment="CENTER" textFill="#008643">
          <font>
-            <Font size="17.0" />
+            <Font size="24.0" />
          </font>
       </Label>
-      <TextArea fx:id="fallo" layoutX="908.0" layoutY="548.0" prefHeight="149.0" prefWidth="317.0" />
-      <Label layoutX="152.0" layoutY="512.0" prefHeight="27.0" prefWidth="172.0" text="Detalle:">
-         <font>
-            <Font size="17.0" />
-         </font>
-      </Label>
+      <TextArea layoutX="180.0" layoutY="543.0" prefHeight="149.0" prefWidth="993.0" />
    </children>
 </AnchorPane>
